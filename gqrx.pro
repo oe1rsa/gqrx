@@ -197,7 +197,7 @@ FORMS += \
     qtgui/nb_options.ui
 
 # Use pulseaudio (ps: could use equals? undocumented)
-contains(AUDIO_BACKEND, pulse): {
+contains(AUDIO_BACKEND, pulse) {
     HEADERS += \
         pulseaudio/pa_device_list.h \
         pulseaudio/pa_sink.h \
@@ -214,7 +214,7 @@ macx {
     SOURCES += osxaudio/device_list.cpp
 }
 
-contains(AUDIO_BACKEND, pulse): {
+contains(AUDIO_BACKEND, pulse) {
     PKGCONFIG += libpulse libpulse-simple
 } else {
     PKGCONFIG += gnuradio-audio
